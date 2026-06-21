@@ -2,10 +2,10 @@ import React from "react";
 
 const projects = [
   {
-    title: "Weather App",
-    description: "A weather forecasting app built with React and Tailwind CSS.",
-    github: "https://github.com/suraj-kumar/weather-app",
-    tech: ["React", "Tailwind CSS", "API"],
+    title: "Employee Management System",
+    description: "A React-based Employee Management System that enables admins to assign and manage tasks efficiently. Employees can track, update, and organize tasks through role-based dashboards with task status management.",
+    github: "https://github.com/suraj6398/Employee-Management.git",
+    tech: ["React.js", "JavaScript", "Tailwind CSS "],
   },
   {
     title: "Portfolio Website",
@@ -18,7 +18,6 @@ const projects = [
 const Projects = () => {
   return (
     <div id="projects" className="min-h-screen w-full bg-black py-16 px-4">
-      {/* Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide relative inline-block">
           Projects
@@ -26,22 +25,18 @@ const Projects = () => {
         </h2>
       </div>
 
-      {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {projects.map((project) => (
           <div
             key={project.title}
             className="bg-[#111] border border-gray-800 rounded-2xl p-10 md:p-12 min-h-[320px] shadow-lg transform transition duration-300 hover:scale-105 hover:-translate-y-1 hover:shadow-2xl"
           >
-            {/* Title */}
             <h3 className="text-3xl font-bold text-white mb-4">
               {project.title}
             </h3>
 
-            {/* Description */}
             <p className="text-gray-400 mb-6 text-lg">{project.description}</p>
 
-            {/* Tech Stack */}
             <div className="flex flex-wrap gap-2 mb-6">
               {project.tech.map((tech) => (
                 <span
@@ -53,7 +48,6 @@ const Projects = () => {
               ))}
             </div>
 
-            {/* GitHub Link */}
             <a
               href={project.github}
               target="_blank"
